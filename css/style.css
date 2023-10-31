@@ -32,13 +32,16 @@ img {
   height: auto;
 }
 :root {
-  font-family: ;
+  font-family: "Manrope", sans-serif;
   line-height: normal;
-  color: ;
+  color: #fcf9f9;
   background-color: var(--black-color);
-  --white-color: ;
-  --black-color: --yellow-color --gray-color --light-gray-color
-    --form-placeholder-color;
+  --white-color: #fcf9f9;
+  --black-color: #1c2225;
+  --yellow-color: #ecd979;
+  --gray-color: rgba(120, 74, 74, 0.6);
+  --light-gray-color: rgba(252, 249, 249, 0.1);
+  --form-placeholder-color: #fcf9f980;
 }
 .container {
   padding-left: 20px;
