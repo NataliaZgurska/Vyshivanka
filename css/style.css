@@ -34,6 +34,7 @@ img {
 :root {
   font-family: "Manrope", sans-serif;
   line-height: normal;
+  font-weight: 400px;
   color: #fcf9f9;
   background-color: var(--black-color);
   --white-color: #fcf9f9;
@@ -46,16 +47,14 @@ img {
 
 @media screen and (min-width: 375px) {
   .container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 375px;
+    min-width: 375px;
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    min-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -93,6 +92,18 @@ img {
 }
 .header-logo-img {
 }
+
+.header-menu-list {
+  display: none;
+}
+.header-menu-item {
+}
+.header-menu-link {
+}
+.header-contacts {
+  display: none;
+}
+
 .header-soc-list {
   display: flex;
   gap: 12px;
@@ -125,13 +136,13 @@ img {
 .nav-btn {
   position: fixed;
   right: 20px;
-  top: 34px;
+  top: 30px;
   display: flex;
   justify-content: end;
   align-items: center;
   width: 36px;
   height: 24px;
-  border: none;
+  border: 1px solid red;
   background-color: var(--black-color);
 }
 .nav-icon {
@@ -162,6 +173,7 @@ img {
     padding-right: 64px;
   }
   .nav-btn {
+    right: 32px;
     width: 44px;
     height: 30px;
     border: 1px solid blue;
@@ -172,5 +184,64 @@ img {
   .nav-icon::after,
   .nav-icon::before {
     width: 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header-container {
+    padding-right: 0;
+    justify-content: space-between;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .logo-menu-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+  .header-menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+  .header-menu-item {
+    font-size: 14px;
+    line-height: 1.28;
+    text-transform: uppercase;
+    transition: color 250ms delay;
+  }
+  .header-menu-link {
+    cursor: pointer;
+  }
+  .header-menu-item:hover {
+    color: var(--yellow-color);
+  }
+
+  .tel-soc-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .header-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 193px;
+    height: 48px;
+    border-radius: 15px;
+    border: 1px solid var(--gray-color);
+    transition: color 250ms delay;
+  }
+  .header-contacts:hover {
+    color: var(--yellow-color);
+  }
+  .header-contacts-link {
+    font-size: 14px;
+    line-height: 1.43;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 }
