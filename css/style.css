@@ -39,10 +39,11 @@ img {
   --white-color: #fcf9f9;
   --black-color: #1c2225;
   --yellow-color: #ecd979;
-  --gray-color: rgba(120, 74, 74, 0.6);
-  --light-gray-color: rgba(252, 249, 249, 0.1);
-  --form-placeholder-color: #fcf9f980;
+  --gray-color: rgba(252, 249, 249, 0.1);
+  --light-gray-color: rgba(252, 249, 249, 0.4);
+  --form-placeholder-color: rgba(252, 249, 249, 0.5);
 }
+
 .container {
   padding-left: 20px;
   padding-right: 20px;
@@ -75,4 +76,83 @@ img {
     padding-top: 75px;
     padding-bottom: 75px;
   }
+}
+
+.header {
+  padding-top: 20px;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 87px;
+}
+
+.header-logo {
+}
+.header-logo-img {
+}
+.header-soc-list {
+  display: flex;
+  gap: 12px;
+}
+.header-soc-item {
+  width: 44px;
+  height: 44px;
+}
+.header-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--gray-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 15px;
+  transition: background-color 250ms delay;
+}
+
+.header-soc-link:hover {
+  background-color: var(--black-color);
+  border-color: var(--yellow-color);
+}
+
+.header-soc-icon {
+  fill: var(--white-color);
+}
+
+.nav-btn {
+  position: fixed;
+  right: 20px;
+  top: 34px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 36px;
+  height: 24px;
+  border: none;
+  background-color: var(--black-color);
+}
+.nav-icon {
+  position: relative;
+  width: 22px;
+  height: 2px;
+  background-color: var(--yellow-color);
+}
+
+.nav-icon::after,
+.nav-icon::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--yellow-color);
+}
+.nav-icon::after {
+  top: -8px;
+}
+.nav-icon::before {
+  top: 8px;
 }
