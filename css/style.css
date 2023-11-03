@@ -79,7 +79,9 @@ img {
   }
 }
 /*************HEADER    ********/
-
+.header {
+  padding-top: 20px;
+}
 .header-container {
   display: flex;
   flex-direction: row;
@@ -133,24 +135,71 @@ img {
 .header-soc-icon {
   fill: var(--white-color);
 }
-/**************************************************/
+
 /*****************  header button ************/
+.navigation-btn {
+  position: fixed;
+  right: 20px;
+  top: 34px;
+  top: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 36px;
+  height: 24px;
+  border: none;
+  background-color: var(--black-color);
+  transition: all 250ms ease-in-out;
+}
+.navigation-icon {
+  position: relative;
+  width: 22px;
+  height: 2px;
+  background-color: var(--yellow-color);
+}
+.navigation-icon::after,
+.navigation-icon::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--yellow-color);
+}
+.navigation-icon::after {
+  top: -8px;
+}
+.navigation-icon::before {
+  top: 8px;
+}
+
+.navigation-btn:hover .navigation-icon::after {
+  top: -10px;
+}
+.navigation-btn:hover .navigation-icon::before {
+  top: 10px;
+}
 /**********************************************/
+@media screen and (max-width: 374px) {
+  .navigation-btn {
+    right: 2px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header-container {
     padding-right: 64px;
   }
-  .nav-btn {
+  .navigation-btn {
     right: 32px;
     width: 44px;
     height: 30px;
-    border: 1px solid blue;
   }
-  .nav-icon {
+  .navigation-icon {
     width: 28px;
   }
-  .nav-icon::after,
-  .nav-icon::before {
+  .navigation-icon::after,
+  .navigation-icon::before {
     width: 36px;
   }
 }
@@ -160,7 +209,7 @@ img {
     padding-right: 0;
     justify-content: space-between;
   }
-  .nav-btn {
+  .navigation-btn {
     display: none;
   }
   .logo-menu-wrap {
@@ -213,6 +262,103 @@ img {
     cursor: pointer;
   }
 }
+/**************Header Modal ******************/
+.header-modal-menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  min-width: 274px;
+  height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;*/
+  background-color: var(--yellow-color);
+  background-image: url(../images/hmodal-bg-min.png);
+  background-repeat: no-repeat;
+
+  background-position: bottom center;
+  padding: 20px;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.hmodal-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 186px;
+}
+.hmodal-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.hmodal-close-icon {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hmodal-close-btn:hover .hmodal-close-icon,
+.hmodal-close-btn:focus .hmodal-close-icon {
+  transform: scale(1.3, 1.3);
+}
+
+.hmodal-contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 158px;
+  height: 38px;
+  border-radius: 15px;
+  border: 1px solid var(--gray-color);
+  transition: color 250ms delay;
+}
+.hmodal-contacts:hover {
+  color: var(--yellow-color);
+}
+.hmodal-contacts-link {
+  font-size: 12px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--black-color);
+}
+.hmodal-navigation {
+  display: flex;
+  justify-content: end;
+}
+.hmodal-navigation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.hmodal-navigation-item {
+}
+.hmodal-navigation-link {
+  color: var(--black-color);
+  font-size: 14px;
+  line-height: 1.28;
+  text-transform: uppercase;
+  transition: box-shadow 250ms ease-in-out, font-weight 250ms ease-in-out;
+}
+
+.hmodal-navigation-item:hover .hmodal-navigation-link {
+  box-shadow: 2px 4px 10px white;
+  font-weight: 600;
+}
+
 /****************TESTIMONIALS******************/
 .testimonials {
 }
@@ -336,108 +482,4 @@ img {
   .testi-text {
     max-width: 306px;
   }
-}
-/****************header button ******/
-.navigation {
-}
-.navigation-toggle {
-}
-/*
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}*/
-
-.navigation-btn {
-  position: fixed;
-  right: 20px;
-  top: 30px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 36px;
-  height: 24px;
-  background-color: var(--black-color);
-  z-index: 30;
-}
-
-.navigation-icon {
-  position: relative;
-  width: 22px;
-  height: 2px;
-  background-color: var(--yellow-color);
-  transition: transform 600ms ease-in-out;
-}
-
-.navigation-icon::after,
-.navigation-icon::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  width: 30px;
-  height: 2px;
-  background-color: var(--yellow-color);
-}
-.navigation-icon::after {
-  top: -8px;
-}
-.navigation-icon::before {
-  top: 8px;
-}
-.navigation-btn:hover .navigation-icon::after {
-  top: 10px;
-}
-.navigation-btn:hover .navigation-icon::before {
-  top: -10px;
-}
-
-.navigation-background {
-  position: fixed;
-  right: 20px;
-  top: 33px;
-  width: 31px;
-  height: 18px;
-  border-radius: 50%;
-  background: radial-gradient(var(--yellow-color), var(--white-color));
-  z-index: 20;
-  transition: transform 600ms ease-in-out;
-}
-
-.navigation-toggle:checked ~ .navigation-background {
-  transform: scale(150);
-}
-
-.navigation-toggle:checked ~ .navigation-btn {
-  background-color: transparent;
-}
-
-.navigation-toggle:checked + .navigation-btn:hover .navigation-icon {
-  background-color: transparent;
-}
-.navigation-toggle:checked + .navigation-btn:hover .navigation-icon::before {
-  top: 0;
-  transform: rotate(-135deg);
-  background-color: var(--black-color);
-}
-.navigation-toggle:checked + .navigation-btn:hover .navigation-icon::after {
-  top: 0;
-  transform: rotate(135deg);
-  background-color: var(--black-color);
-}
-
-.navigation-nav {
-}
-.navigation-list {
-}
-.navigation-item {
-}
-.navigation-link {
 }

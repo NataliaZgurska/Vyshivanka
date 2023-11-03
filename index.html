@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="section header">
+    <header class="header">
       <div class="container">
         <div class="header-container">
           <div class="logo-menu-wrap">
@@ -102,38 +102,48 @@
             </ul>
           </div>
         </div>
-        <!---------header button---------->
-        <div class="navigation">
-          <input
-            class="navigation-toggle visually-hidden"
-            type="checkbox"
-            id="toggle"
-          />
-          <label class="navigation-btn" for="toggle">
-            <span class="navigation-icon"></span>
-          </label>
-          <div class="navigation-background"></div>
-          <nav class="navigation-nav">
-            <ul class="navigation-list">
-              <li class="navigation-item">
-                <a class="navigation-link" href="#about-us">About us</a>
+
+        <button class="navigation-btn" type="button">
+          <span class="navigation-icon"></span>
+        </button>
+        <!--------- Modal   is-open---------->
+        <div class="header-modal-menu is-open">
+          <div class="hmodal-top">
+            <div class="hmodal-contacts">
+              <a class="hmodal-contacts-link" href="tel:+380684439426"
+                >+380 (68) 443-94-26</a
+              >
+            </div>
+            <button type="button" class="hmodal-close-btn">
+              <svg class="hmodal-close-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-close-x"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="hmodal-navigation">
+            <ul class="hmodal-navigation-list">
+              <li class="hmodal-navigation-item">
+                <a class="hmodal-navigation-link" href="#about-us">About us</a>
               </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#our-collection"
+              <li class="hmodal-navigation-item">
+                <a class="hmodal-navigation-link" href="#our-collection"
                   >Our collection</a
                 >
               </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#customer-order"
+              <li class="hmodal-navigation-item">
+                <a class="hmodal-navigation-link" href="#customer-order"
                   >CUSTOMER ORDER</a
                 >
               </li>
-              <li class="navigation-item">
-                <a class="navigation-link" href="#testimonials">TEstimonials</a>
+              <li class="hmodal-navigation-item">
+                <a class="hmodal-navigation-link" href="#testimonials"
+                  >TEstimonials</a
+                >
               </li>
             </ul>
           </nav>
         </div>
+        <!--------------->
 
         <!------------------------>
       </div>
