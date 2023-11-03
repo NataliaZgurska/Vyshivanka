@@ -133,42 +133,9 @@ img {
 .header-soc-icon {
   fill: var(--white-color);
 }
-
-.nav-btn {
-  position: fixed;
-  right: 20px;
-  top: 30px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  width: 36px;
-  height: 24px;
-  border: 1px solid red;
-  background-color: var(--black-color);
-}
-.nav-icon {
-  position: relative;
-  width: 22px;
-  height: 2px;
-  background-color: var(--yellow-color);
-}
-
-.nav-icon::after,
-.nav-icon::before {
-  content: "";
-  position: absolute;
-  left: -8px;
-  width: 30px;
-  height: 2px;
-  background-color: var(--yellow-color);
-}
-.nav-icon::after {
-  top: -8px;
-}
-.nav-icon::before {
-  top: 8px;
-}
-
+/**************************************************/
+/*****************  header button ************/
+/**********************************************/
 @media screen and (min-width: 768px) {
   .header-container {
     padding-right: 64px;
@@ -369,4 +336,75 @@ img {
   .testi-text {
     max-width: 306px;
   }
+}
+/****************header button ******/
+.navigation {
+}
+.navigation-toggle {
+}
+.navigation-btn {
+  position: fixed;
+  right: 20px;
+  top: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 36px;
+  height: 24px;
+  border: 1px solid red;
+  /*background-color: var(--black-color);*/
+  z-index: 30;
+}
+
+.navigation-icon {
+  position: relative;
+  width: 22px;
+  height: 2px;
+  background-color: var(--yellow-color);
+  transition: transform 600ms ease-in-out;
+}
+
+.navigation-icon::after,
+.navigation-icon::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  width: 30px;
+  height: 2px;
+  background-color: var(--yellow-color);
+}
+.navigation-icon::after {
+  top: -8px;
+}
+.navigation-icon::before {
+  top: 8px;
+}
+.navigation-btn:hover .navigation-icon::after {
+  top: 10px;
+}
+.navigation-btn:hover .navigation-icon::before {
+  top: -10px;
+}
+
+.navigation-toggle:checked + .navigation-btn:hover .navigation-icon {
+  background-color: transparent;
+}
+.navigation-toggle:checked + .navigation-btn:hover .navigation-icon::before {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.navigation-toggle:checked + .navigation-btn:hover .navigation-icon::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.navigation-background {
+}
+.navigation-nav {
+}
+.navigation-list {
+}
+.navigation-item {
+}
+.navigation-link {
 }
