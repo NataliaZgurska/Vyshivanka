@@ -342,6 +342,20 @@ img {
 }
 .navigation-toggle {
 }
+/*
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}*/
+
 .navigation-btn {
   position: fixed;
   right: 20px;
@@ -351,8 +365,7 @@ img {
   align-items: center;
   width: 36px;
   height: 24px;
-  border: 1px solid red;
-  /*background-color: var(--black-color);*/
+  background-color: var(--black-color);
   z-index: 30;
 }
 
@@ -386,20 +399,40 @@ img {
   top: -10px;
 }
 
+.navigation-background {
+  position: fixed;
+  right: 20px;
+  top: 33px;
+  width: 31px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(var(--yellow-color), var(--white-color));
+  z-index: 20;
+  transition: transform 600ms ease-in-out;
+}
+
+.navigation-toggle:checked ~ .navigation-background {
+  transform: scale(150);
+}
+
+.navigation-toggle:checked ~ .navigation-btn {
+  background-color: transparent;
+}
+
 .navigation-toggle:checked + .navigation-btn:hover .navigation-icon {
   background-color: transparent;
 }
 .navigation-toggle:checked + .navigation-btn:hover .navigation-icon::before {
   top: 0;
   transform: rotate(-135deg);
+  background-color: var(--black-color);
 }
 .navigation-toggle:checked + .navigation-btn:hover .navigation-icon::after {
   top: 0;
   transform: rotate(135deg);
+  background-color: var(--black-color);
 }
 
-.navigation-background {
-}
 .navigation-nav {
 }
 .navigation-list {
