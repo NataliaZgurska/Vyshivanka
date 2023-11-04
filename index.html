@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -162,17 +164,45 @@
         </svg>
       </button>
       <div class="hero-photo-wrap">
+        <picture>
+          <source
+            srcset="
+              ./images/hero/girl-desc-min.png    1x,
+              ./images/hero/girl-desc-2x-min.png 2x
+            "
+            media="(min-width:1280px)"
+          />
+          <source
+            srcset="
+              ./images/hero/girl-tab-min.png    1x,
+              ./images/hero/girl-tab-2x-min.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/hero/girl-mob-min.png    1x,
+              ./images/hero/girl-mob-2x-min.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            class="hero-img"
+            src="./images/hero/girl-mob-min.png"
+            alt="girl"
+            width="335"
+          />
+        </picture>
+      </div>
+      <div class="hero-star-wrap">
         <img
-          class="hero-img"
-          srcset="
-            ./images/hero/girl-mob-min.png    1x,
-            ./images/hero/girl-mob-2x-min.png 2x
-          "
-          src="./images/hero/girl-mob-min.png"
-          alt="girl"
-          width="335"
-          height="545"
+          class="hero-star-img"
+          src="./images/hero/Star 10.svg"
+          alt="star"
+          width="52"
+          height="51"
         />
+        <p class="hero-star-text">all embroidery is made by hand</p>
       </div>
     </section>
 
