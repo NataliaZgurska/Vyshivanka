@@ -52,8 +52,8 @@ img {
     padding-right: 20px;
   }
   .section {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -81,6 +81,7 @@ img {
 /*************HEADER    ********/
 .header {
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 .header-container {
   display: flex;
@@ -179,7 +180,7 @@ img {
 .navigation-btn:hover .navigation-icon::before {
   top: 10px;
 }
-/**********************************************/
+/********************Header tab - desk *******************/
 @media screen and (max-width: 374px) {
   .navigation-btn {
     right: 2px;
@@ -187,6 +188,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .header {
+    padding-bottom: 56px;
+  }
   .header-container {
     padding-right: 64px;
   }
@@ -205,6 +209,9 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
+  .header {
+    padding-bottom: 25px;
+  }
   .header-container {
     padding-right: 0;
     justify-content: space-between;
@@ -271,7 +278,7 @@ img {
   min-width: 274px;
   height: 100vh;
   background-color: var(--yellow-color);
-  background-image: url(../images/hmodal-bg-min.png);
+  background-image: url(../images/header/hmodal-bg-min.png);
   background-repeat: no-repeat;
   background-position: bottom center;
   padding: 20px;
@@ -285,7 +292,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/hmodal-bg-2x-min.png);
+    background-image: url(../images/header/hmodal-bg-2x-min.png);
   }
 }
 
@@ -366,14 +373,14 @@ img {
 @media screen and (min-width: 768px) {
   .header-modal-menu {
     min-width: 380px;
-    background-image: url(../images/hmodal-bg-tab-min.png);
+    background-image: url(../images/header/hmodal-bg-tab-min.png);
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
-      background-image: url(../images/hmodal-bg-tab-2x-min.png);
+      background-image: url(../images/header/hmodal-bg-tab-2x-min.png);
     }
   }
 
@@ -400,6 +407,29 @@ img {
   .header-modal-menu {
     display: none;
   }
+}
+/************HERO *****************************/
+.section {
+}
+.hero {
+}
+.container {
+}
+.hero-title {
+  font-size: 44px;
+  line-height: 1.23;
+  letter-spacing: -0.03em;
+}
+.hero-span {
+  color: var(--yellow-color);
+}
+.hero-btn {
+}
+.hero-btn-icon {
+}
+.hero-photo-wrap {
+}
+.hero-img {
 }
 /****************TESTIMONIALS******************/
 .testimonials {
