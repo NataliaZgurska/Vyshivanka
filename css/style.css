@@ -139,7 +139,7 @@ img {
 
 /*****************  header button ************/
 .navigation-btn {
-  position: fixed;
+  position: absolute;
   right: 20px;
   top: 34px;
   top: 30px;
@@ -388,8 +388,6 @@ img {
     margin-bottom: 223px;
   }
   .hmodal-close-btn {
-    width: 44px;
-    height: 44px;
   }
   .hmodal-contacts {
     width: 193px;
@@ -416,18 +414,44 @@ img {
 .container {
 }
 .hero-title {
+  max-width: 497px;
   font-size: 44px;
   line-height: 1.23;
   letter-spacing: -0.03em;
+  margin-bottom: 20px;
 }
 .hero-span {
   color: var(--yellow-color);
 }
 .hero-btn {
+  width: 155px;
+  height: 49px;
+  background-color: var(--black-color);
+  border-radius: 15px;
+  border: 1px solid var(--gray-color);
+  color: var(--white, #fcf9f9);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px;
+  margin-bottom: 40px;
+  transition: border-color 250ms ease-in-out;
+}
+.hero-btn:hover {
+  border-color: var(--yellow-color);
 }
 .hero-btn-icon {
 }
+
 .hero-photo-wrap {
+  display: flex;
+  justify-content: center;
 }
 .hero-img {
 }
