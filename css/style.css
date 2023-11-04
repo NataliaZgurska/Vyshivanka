@@ -387,8 +387,7 @@ img {
   .hmodal-top {
     margin-bottom: 223px;
   }
-  .hmodal-close-btn {
-  }
+
   .hmodal-contacts {
     width: 193px;
   }
@@ -454,6 +453,17 @@ img {
   justify-content: center;
 }
 .hero-img {
+}
+@media screen and (min-width: 768px) {
+  .hero-title {
+    max-width: 549px;
+    border: 1px solid red;
+    font-size: 54px;
+    font-weight: 400px;
+    font-style: normal;
+    line-height: 1.18;
+    margin-bottom: 40px;
+  }
 }
 /****************TESTIMONIALS******************/
 .testimonials {
