@@ -270,13 +270,9 @@ img {
   right: 0;
   min-width: 274px;
   height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;*/
   background-color: var(--yellow-color);
   background-image: url(../images/hmodal-bg-min.png);
   background-repeat: no-repeat;
-
   background-position: bottom center;
   padding: 20px;
   visibility: hidden;
@@ -284,6 +280,15 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/hmodal-bg-2x-min.png);
+  }
+}
+
 .is-open {
   opacity: 1;
   visibility: visible;
@@ -358,7 +363,44 @@ img {
   box-shadow: 2px 4px 10px white;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .header-modal-menu {
+    min-width: 380px;
+    background-image: url(../images/hmodal-bg-tab-min.png);
+  }
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(../images/hmodal-bg-tab-2x-min.png);
+    }
+  }
+
+  .hmodal-top {
+    margin-bottom: 223px;
+  }
+  .hmodal-close-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .hmodal-contacts {
+    width: 193px;
+  }
+  .hmodal-contacts-link {
+    font-size: 14px;
+    line-height: 1.43;
+  }
+  .hmodal-navigation-list {
+    gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header-modal-menu {
+    display: none;
+  }
+}
 /****************TESTIMONIALS******************/
 .testimonials {
 }
