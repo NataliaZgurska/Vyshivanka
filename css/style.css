@@ -406,18 +406,15 @@ img {
   }
 }
 /************HERO *****************************/
-.section {
-}
 .hero {
   position: relative;
 }
-.container {
-}
+
 .hero-title {
   max-width: 497px;
-  font-family: "Manrope", sans-serif;
   font-size: 44px;
-  font-weight: 400px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1.23;
   letter-spacing: -0.03em;
   margin-bottom: 20px;
@@ -448,68 +445,20 @@ img {
 .hero-btn:hover {
   border-color: var(--yellow-color);
 }
-.hero-btn-icon {
-}
 
-.hero-photo-wrap {
-}
-.hero-img {
-}
 .hero-star-wrap {
-  position: absolute;
-  top: 25px;
-  right: 32px;
-  width: 115px;
-  height: 111px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  border: 1px solid red;
+  display: none;
 }
-.hero-star-img {
-  transition: transform 600s linear;
-}
-
-.hero-star-wrap:hover .hero-star-img {
-  transform: rotate(100turn);
-}
-.hero-star-text {
-  max-width: 115px;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: -0.04em;
-  color: var(--gray-color);
-  transition: color 250ms ease-out;
-}
-.hero-star-wrap:hover .hero-star-text {
-  color: var(--light-gray-color);
-}
-
 .hero-map-wrap {
-  position: absolute;
-  bottom: 40px;
-  right: 32px;
-  width: 140px;
-  height: 100px;
-  border-top-left-radius: 10em 14em;
-  border-top-right-radius: 10em 14em;
-  overflow: hidden;
-  transition: box-shadow 500ms ease-in-out;
+  display: none;
 }
 
-.hero-map-wrap:hover {
-  box-shadow: 10px 10px 30px 2px rgba(255, 255, 255, 0.559);
-}
-.hero-map-img {
-}
+/***********HERO 768 ******************/
 
 @media screen and (min-width: 768px) {
   .hero-title {
     max-width: 549px;
-    border: 1px solid red;
-    font-size: 52px;
-    /********fs має бути 54, але не працює font-weight ***********/
+    font-size: 54px;
     font-weight: 400px;
     line-height: 1.18;
     margin-bottom: 40px;
@@ -520,13 +469,80 @@ img {
     font-size: 16px;
     margin-left: 141px;
   }
+  .hero-photo-wrap {
+    width: 413px;
+    border: 1px solid yellow;
+  }
+  /********невірний розмір картинки ********/
+  .hero-picture img {
+    object-fit: cover;
+  }
+  .hero-star-wrap {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    width: 115px;
+    height: 111px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-star-img {
+    transition: transform 600s linear;
+  }
+
+  .hero-star-wrap:hover .hero-star-img {
+    transform: rotate(100turn);
+  }
+  .hero-star-text {
+    max-width: 115px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: -0.04em;
+    color: var(--gray-color);
+    transition: color 250ms ease-out;
+  }
+  .hero-star-wrap:hover .hero-star-text {
+    color: var(--light-gray-color);
+  }
+
+  .hero-map-wrap {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 140px;
+    height: 100px;
+    border-top-left-radius: 10em 14em;
+    border-top-right-radius: 10em 14em;
+    overflow: hidden;
+    transition: box-shadow 500ms ease-in-out;
+  }
+
+  .hero-map-wrap:hover {
+    box-shadow: 10px 10px 30px 2px rgba(255, 255, 255, 0.559);
+  }
 }
 @media screen and (min-width: 1280px) {
-  .hero-star-wrap {
-    right: 100px;
+  .hero-content-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 40px;
   }
-  .hero-map-wrap {
-    right: 100px;
+  .hero-photo-wrap {
+    width: 392px;
+  }
+  .hero-title-btn-wrap {
+    margin-top: 94px;
+  }
+  .hero-title {
+    max-width: 518px;
+  }
+
+  .hero-star-wrap {
+    top: 14px;
   }
 }
 /****************TESTIMONIALS******************/

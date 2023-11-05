@@ -152,67 +152,75 @@
     </header>
 
     <!--------------------HERO--------------------->
-    <section class="section hero container">
-      <h1 class="hero-title">
-        Reviving the traditional
-        <span class="hero-span">Ukrainian</span> artistry in every stitch.
-      </h1>
-      <button class="hero-btn" type="button">
-        Order
-        <svg class="hero-btn-icon" width="26" height="10">
-          <use href="./images/icons.svg#icon-arrow"></use>
-        </svg>
-      </button>
-      <div class="hero-photo-wrap">
-        <picture>
-          <source
-            srcset="
-              ./images/hero/girl-desc-min.png    1x,
-              ./images/hero/girl-desc-2x-min.png 2x
-            "
-            media="(min-width:1280px)"
-          />
-          <source
-            srcset="
-              ./images/hero/girl-tab-min.png    1x,
-              ./images/hero/girl-tab-2x-min.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/hero/girl-mob-min.png    1x,
-              ./images/hero/girl-mob-2x-min.png 2x
-            "
-            media="(max-width: 767px)"
-          />
+    <section class="section container">
+      <div class="hero">
+        <div class="hero-content-wrap">
+          <div class="hero-title-btn-wrap">
+            <h1 class="hero-title">
+              Reviving the traditional
+              <span class="hero-span">Ukrainian</span> artistry in every stitch.
+            </h1>
+            <button class="hero-btn" type="button">
+              Order
+              <svg class="hero-btn-icon" width="26" height="10">
+                <use href="./images/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div class="hero-photo-wrap">
+            <picture class="hero-picture">
+              <source
+                srcset="
+                  ./images/hero/girl-desc-min.png    1x,
+                  ./images/hero/girl-desc-2x-min.png 2x
+                "
+                media="(min-width:1280px)"
+              />
+              <source
+                srcset="
+                  ./images/hero/girl-tab-min.png    1x,
+                  ./images/hero/girl-tab-2x-min.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./images/hero/girl-mob-min.png    1x,
+                  ./images/hero/girl-mob-2x-min.png 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img
+                class="hero-img"
+                src="./images/hero/girl-mob-min.png"
+                alt="girl"
+                width="335"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div class="hero-star-wrap">
           <img
-            class="hero-img"
-            src="./images/hero/girl-mob-min.png"
-            alt="girl"
-            width="335"
+            class="hero-star-img"
+            src="./images/hero/Star 10.svg"
+            alt="star"
+            width="52"
+            height="51"
           />
-        </picture>
-      </div>
-      <div class="hero-star-wrap">
-        <img
-          class="hero-star-img"
-          src="./images/hero/Star 10.svg"
-          alt="star"
-          width="52"
-          height="51"
-        />
-        <p class="hero-star-text">all embroidery is made by hand</p>
-      </div>
-      <div class="hero-map-wrap">
-        <!--<div class="hero-map-ellipse"></div>-->
-        <img
-          class="hero-map-img"
-          src="./images/hero/map-2x-min.png"
-          alt="map"
-          width="140"
-          height="100"
-        />
+          <p class="hero-star-text">all embroidery is made by hand</p>
+        </div>
+        <div class="hero-map-wrap">
+          <!--<div class="hero-map-ellipse"></div>-->
+          <img
+            class="hero-map-img"
+            src="./images/hero/map-2x-min.png"
+            alt="map"
+            width="140"
+            height="100"
+          />
+        </div>
       </div>
     </section>
 
