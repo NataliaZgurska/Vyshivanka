@@ -446,6 +446,16 @@ img {
   border-color: var(--yellow-color);
 }
 
+.hero-photo-wrap {
+  width: 335px;
+  height: 545px;
+}
+.hero-img,
+.hero-picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .hero-star-wrap {
   display: none;
 }
@@ -471,12 +481,9 @@ img {
   }
   .hero-photo-wrap {
     width: 413px;
-    border: 1px solid yellow;
+    height: 575px;
   }
-  /********невірний розмір картинки ********/
-  .hero-picture img {
-    object-fit: cover;
-  }
+
   .hero-star-wrap {
     position: absolute;
     top: -25px;
@@ -533,6 +540,7 @@ img {
   }
   .hero-photo-wrap {
     width: 392px;
+    height: 545px;
   }
   .hero-title-btn-wrap {
     margin-top: 94px;
@@ -544,6 +552,56 @@ img {
   .hero-star-wrap {
     top: 14px;
   }
+}
+/**************** OUR COLLECTION **************/
+.collection {
+}
+.collection-title {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.37;
+  letter-spacing: -0.03em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.collection-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.collection-item {
+  max-width: 335px;
+}
+.collection-img-thumb {
+  height: 400px;
+  width: 335px;
+}
+.collection-picture,
+.collection-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.vyshvianka-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  max-width: 335px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+.vyshivanka-price {
+  color: var(--light-gray-color);
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: 0.05em;
 }
 /****************TESTIMONIALS******************/
 .testimonials {
