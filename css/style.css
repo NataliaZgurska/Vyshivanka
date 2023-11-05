@@ -180,6 +180,23 @@ img {
 .navigation-btn:hover .navigation-icon::before {
   top: 10px;
 }
+/******   chat-btn   *****/
+.chat-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.chat-btn:hover .hero-star-img {
+  transform: rotate(100turn);
+}
 /********************Header tab - desk *******************/
 @media screen and (max-width: 374px) {
   .navigation-btn {
@@ -568,7 +585,9 @@ img {
 .collection-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
+  justify-content: center;
 }
 .collection-item {
   max-width: 335px;
@@ -576,25 +595,33 @@ img {
 .collection-img-thumb {
   height: 400px;
   width: 335px;
+  overflow: hidden;
 }
 
 .collection-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 500ms ease-in-out;
+}
+.collection-item:hover .collection-img {
+  transform: scale(1.4);
 }
 .vyshvianka-title {
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  max-width: 335px;
+  width: 335px;
+  height: 18px;
   margin-top: 18px;
   margin-bottom: 8px;
+  transition: color 500ms ease-in-out;
+}
+.collection-item:hover .vyshvianka-title {
+  color: var(--yellow-color);
 }
 .vyshivanka-price {
   color: var(--light-gray-color);
@@ -603,6 +630,51 @@ img {
   line-height: 1;
   letter-spacing: 0.05em;
 }
+/**** Our collection 768    ******/
+@media screen and (min-width: 768px) {
+  .collection-title {
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  .collection-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20;
+  }
+  .collection-item {
+    max-width: 342px;
+  }
+  .collection-img-thumb {
+    height: 430px;
+    width: 342px;
+  }
+  .vyshvianka-title {
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .vyshivanka-price {
+    font-size: 18px;
+  }
+}
+/**** Our collection 1280    ******/
+@media screen and (min-width: 1280px) {
+  .collection-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 20px;
+  }
+  .collection-item {
+    max-width: 346px;
+  }
+  .collection-img-thumb {
+    width: 346px;
+  }
+}
+
 /****************TESTIMONIALS******************/
 .testimonials {
 }
