@@ -69,7 +69,7 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1280px;
+    min-width: 1280px;
     padding-left: 100px;
     padding-right: 100px;
   }
@@ -572,6 +572,11 @@ img {
 }
 /**************** OUR COLLECTION **************/
 .collection {
+  background-image: url(../images/our-collection/ornament-mob-min.png);
+  background-size: 90px 177px;
+  background-repeat: no-repeat;
+  background-position: top 340px left -2px;
+  background-origin: border-box;
 }
 .collection-title {
   font-size: 32px;
@@ -630,8 +635,21 @@ img {
   line-height: 1;
   letter-spacing: 0.05em;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .collection {
+    background-image: url(../images/our-collection/ornament-mob-2x-min.png);
+  }
+}
 /**** Our collection 768    ******/
 @media screen and (min-width: 768px) {
+  .collection {
+    background-image: url(../images/our-collection/ornament-tab-min.png);
+    background-size: 110px 300px;
+    background-position: top 270px left 0px;
+  }
+
   .collection-title {
     font-size: 44px;
     font-weight: 500;
@@ -657,9 +675,22 @@ img {
   .vyshivanka-price {
     font-size: 18px;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .collection {
+      background-image: url(../images/our-collection/ornament-tab-2x-min.png);
+    }
+  }
 }
 /**** Our collection 1280    ******/
 @media screen and (min-width: 1280px) {
+  .collection {
+    background-image: url(../images/our-collection/ornament-desc-min.png);
+    background-size: 165px 300px;
+    background-position: top 290px left 2px;
+  }
+
   .collection-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -673,11 +704,43 @@ img {
   .collection-img-thumb {
     width: 346px;
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .collection {
+      background-image: url(../images/our-collection/ornament-desc-2x-min.png);
+    }
+  }
+}
+/**** Our collection 1440    ******/
+@media screen and (min-width: 1440px) {
+  .collection {
+    background-image: url(../images/our-collection/ornament-desc1440-min.png);
+    background-size: 165px 300px;
+    background-position: top 307px left 2px;
+  }
+  .collection-item {
+    max-width: 400px;
+  }
+  .collection-img-thumb {
+    width: 400px;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .collection {
+      background-image: url(../images/our-collection/ornament-desc1440-2x-min.png);
+    }
+  }
 }
 /*********************ORDER *******************/
 .section {
 }
 .order {
+  background-image: url(../images/order/girl.png);
+  background-size: 375px 550px;
+  background-repeat: no-repeat;
+  background-position: top 40px left 0px;
 }
 .container {
 }
@@ -689,6 +752,7 @@ img {
   line-height: 1.37;
   letter-spacing: -0.03em;
   margin-bottom: 40px;
+  margin-top: 630px;
 }
 .order-span {
   color: var(--yellow-color);
@@ -700,6 +764,7 @@ img {
 .order-input {
   width: 100%;
   height: 47px;
+  color: var(--white-color);
   background-color: transparent;
   border: 1px solid var(--gray-color);
   border-radius: 15px;
@@ -708,6 +773,7 @@ img {
   margin-bottom: 20px;
   transition: border-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .order-input:focus,
 .order-textarea:focus {
   border-color: var(--white-color);
@@ -722,7 +788,7 @@ img {
 .order-textarea {
   width: 100%;
   height: 196px;
-  color: var(--form-placeholder-color);
+  color: var(--white-color);
   font-size: 14px;
   font-style: normal;
   line-height: normal;
@@ -735,6 +801,9 @@ img {
   padding: 14px 16px;
   margin-bottom: 40px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.order-textarea::placeholder {
+  color: var(--form-placeholder-color);
 }
 
 .order-btn {
@@ -762,109 +831,40 @@ img {
 }
 .order-btn-icon {
 }
-
-/************************************/
-
-.modal-field {
-  margin-bottom: 8px;
+.order-vyshivanka-example {
+  display: none;
+}
+/*************Order 768 ***************/
+@media screen and (min-width: 768px) {
+  .order {
+    background-image: url(../images/order/girl-tab-min.png);
+    background-size: 768px 776px;
+    background-repeat: no-repeat;
+    background-position: top 50px left 0px;
+  }
+  .order-title {
+    margin-top: 868px;
+    width: 542px;
+    font-size: 44px;
+    line-height: 1.32;
+  }
+  .order-form {
+    max-width: 508px;
+  }
+  .order-vyshivanka-example {
+    display: block;
+    margin-top: 100px;
+    background-image: url(../images/order/order-ornament-min.png);
+    background-size: 323px 484px;
+    background-repeat: no-repeat;
+    background-position: bottom 0px left 0px;
+  }
+  .order-img {
+    margin-left: auto;
+    padding-bottom: 79px;
+  }
 }
 
-.modal-input {
-  width: 100%;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  padding-top: 11px;
-  padding-left: 38px;
-  padding-bottom: 11px;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-input:focus,
-.modal-textarea:focus {
-  border-color: #4d5ae5;
-}
-.modal-input:focus + .modal-icon {
-  fill: #4d5ae5;
-}
-
-.modal-label {
-  display: block;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  margin-bottom: 4px;
-}
-.modal-textarea-container {
-  margin-bottom: 16px;
-}
-.modal-textarea {
-  width: 100%;
-  height: 120px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  border-color: #2e2f42;
-  outline: transparent;
-  resize: none;
-  padding: 8px 16px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-textarea::placeholder {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-}
-
-.checkbox-container {
-  margin-bottom: 24px;
-}
-
-.check-label {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-
-.link-privacy {
-  color: #4d5ae5;
-  text-decoration-line: underline;
-}
-.check-label-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-check:checked + .check-label > .check-label-box {
-  background-color: #404bbf;
-  border: none;
-  fill: #f4f4fd;
-}
-.modal-form-btn {
-  margin: 0 auto;
-}
 /****************TESTIMONIALS******************/
 .testimonials {
 }
