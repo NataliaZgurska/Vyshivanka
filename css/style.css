@@ -578,6 +578,10 @@ img {
   background-position: top 340px left -2px;
   background-origin: border-box;
 }
+.collection-wrap {
+  max-width: 335px;
+  margin: 0 auto;
+}
 .collection-title {
   font-size: 32px;
   font-style: normal;
@@ -649,7 +653,9 @@ img {
     background-size: 110px 300px;
     background-position: top 270px left 0px;
   }
-
+.collection-wrap {
+  max-width: 704px;
+ }
   .collection-title {
     font-size: 44px;
     font-weight: 500;
@@ -690,7 +696,9 @@ img {
     background-size: 165px 300px;
     background-position: top 290px left 2px;
   }
-
+.collection-wrap {
+  max-width: 1081px;
+ }
   .collection-list {
     max-width: 1082px;
     flex-direction: row;
@@ -720,6 +728,9 @@ img {
     background-size: 165px 300px;
     background-position: top 307px left 2px;
   }
+  .collection-wrap {
+  max-width: 1240px;
+ }
   .collection-list {
     max-width: 1240px;
   }
@@ -744,7 +755,7 @@ img {
   background-image: url(../images/order/girl.png);
   background-size: 375px 550px;
   background-repeat: no-repeat;
-  background-position: top 40px left 0px;
+  background-position: top 40px center;
 }
 .container {
 }
@@ -844,7 +855,7 @@ img {
       url(../images/order/order-ornament-min.png);
     background-size: 768px 776px, 323px 484px;
     background-repeat: no-repeat, no-repeat;
-    background-position: top 50px left 0px, bottom 0px left 0px;
+    background-position: top 50px center, bottom 0px left 0px;
   }
   .order-title {
     margin-top: 868px;
@@ -871,7 +882,7 @@ img {
       url(../images/order/order-ornament-min.png);
     background-size: 1282px 776px, 323px 484px;
     background-repeat: no-repeat, no-repeat;
-    background-position: top 75px left 0px, bottom 75px left 0px;
+    background-position: top 75px center, bottom 75px left 0px;
     display: flex;
     flex-direction: row-reverse;
     gap: 50px;
@@ -896,10 +907,13 @@ img {
     background-image: url(../images/order/girl-desc1440.png),
       url(../images/order/order-ornament-min.png);
     background-size: 1440px 776px, 323px 484px;
+     background-position: top 75px center, bottom 75px left 0px;
   }
 }
 /****************TESTIMONIALS******************/
-.testimonials {
+.testimonials-wrap {
+max-width: 335px;
+margin: 0 auto;
 }
 .testi-title {
   font-size: 32px;
@@ -909,6 +923,7 @@ img {
   color: var(--white-color);
   margin-bottom: 64px;
 }
+
 .testimonials-card-item {
   position: relative;
   display: flex;
@@ -973,10 +988,14 @@ img {
 
 /**********   768   **********/
 @media screen and (min-width: 768px) {
+  .testimonials-wrap {
+max-width: 704px;
+}
   .testimonials-card-list {
     display: flex;
     flex-direction: row;
     gap: 32px;
+   
   }
 
   .testi-title {
@@ -1005,9 +1024,12 @@ img {
     font-weight: 400;
     line-height: normal;
   }
-}
-/************  1280    ******/
+
+/************ Testimonials 1280    ******/
 @media screen and (min-width: 1280px) {
+  .testimonials-wrap {
+max-width: 1080px;
+}
   .testimonials-card-list {
     gap: 26px;
   }
@@ -1020,5 +1042,17 @@ img {
   }
   .testi-text {
     max-width: 306px;
+  }
+}
+/************ Testimonials 1440   ******/
+@media screen and (min-width: 1440px) {
+  .testimonials-wrap {
+max-width: 1240px;
+}
+    .testimonials-card-item {
+        max-width: 396px;
+  }
+  .testi-text {
+    max-width: 360px;
   }
 }
