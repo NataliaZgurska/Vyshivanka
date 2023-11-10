@@ -383,13 +383,30 @@
         </form>
       </div>
       <div class="order-vyshivanka-example">
-        <img
-          class="order-img"
-          width="638"
-          height="521"
-          src="./images/order/vyshivka-tab-min.png"
-          alt="vyshivanka-example"
-        />
+        <picture class="order-example-picture">
+          <source
+            srcset="
+              ./images/order/vyshivka-desc-min.png    1x,
+              ./images/order/vyshivka-desc-2x-min.png 2x
+            "
+            media="(min-width:1280px)"
+          />
+          <source
+            srcset="
+              ./images/order/vyshivka-tab-min.png    1x,
+              ./images/order/vyshivka-tab-2x-min.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <img
+            class="order-img"
+            width="638"
+            height="521"
+            src="./images/order/vyshivka-tab-min.png"
+            alt="vyshivanka-example"
+          />
+        </picture>
       </div>
     </section>
     <!---------------------TESTIMONIALS-->
