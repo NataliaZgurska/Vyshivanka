@@ -1104,7 +1104,6 @@ img {
   .footer {
     background-image: url(../images/footer/foot-ornament-tab-min.png);
     background-size: 174px 370px;
-    background-repeat: no-repeat;
     background-position: center right;
     margin-top: 50px;
   }
@@ -1121,5 +1120,27 @@ img {
     max-width: 521px;
     font-size: 54px;
     line-height: 1.18;
+  }
+}
+/*************  Footer 1280 ***********/
+@media screen and (min-width: 1280px) {
+  .footer {
+    background-image: url(../images/footer/foot-ornament-desc-min.png);
+    background-size: 336px 363px;
+    background-position: center right;
+    margin-top: 75px;
+  }
+  .footer-title {
+    margin-top: 117px;
+    max-width: 754px;
+    font-size: 61px;
+    line-height: 1.15;
+  }
+}
+/*************  Footer 1440 ***********/
+@media screen and (min-width: 1440px) {
+  .footer {
+    background-image: url(../images/footer/foot-ornament-desc1440-min.png);
+    background-size: 496px 363px;
   }
 }
