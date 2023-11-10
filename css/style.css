@@ -893,6 +893,8 @@ img {
 /*************Order 1440 ***************/
 @media screen and (min-width: 1440px) {
   .order {
+    background-image: url(../images/order/girl-desc1440.png),
+      url(../images/order/order-ornament-min.png);
     background-size: 1440px 776px, 323px 484px;
   }
 }
